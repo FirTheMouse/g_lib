@@ -4,8 +4,6 @@
 #include <atomic>
 
 
-namespace Golden {
-
 class q_object {
     protected:
         mutable std::atomic<int> refCount{0};
@@ -145,6 +143,5 @@ class q_object {
         return g_dynamic_pointer_cast<T>(from);
    }
 
-}
 
 

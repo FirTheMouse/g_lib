@@ -1,8 +1,10 @@
 #pragma once
 
 #include <util/util.hpp>
+#include <core/object.hpp>
 #include <chrono>
 #include <iostream>
+
 
 namespace Log {
 
@@ -18,6 +20,8 @@ double time_function(int ITERATIONS,std::function<void(int)> process) {
 }
 
 struct Comparison_ {
+    Comparison_() {}
+    Comparison_(int a, int b, int c, int d) : a_table(a), a_row(b), b_table(c), b_row(d) {}
     int a_table, a_row;
     int b_table, b_row;
 };

@@ -5,9 +5,6 @@
 #include <util/util.hpp>
 #include<core/q_object.hpp>
 
-
-namespace Golden {
-
 class Type;
 
 struct Storage : public q_object {
@@ -168,6 +165,5 @@ class Object : virtual public q_object {
             return *this;
         }
     };
-}
 
 

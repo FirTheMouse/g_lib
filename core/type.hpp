@@ -2,8 +2,7 @@
 
 #include <core/object.hpp>
 #include <util/util.hpp>
-
-namespace Golden {
+#include <util/logger.hpp>
 
 struct value_ {
     value_(size_t _size, std::string _name) 
@@ -1085,4 +1084,3 @@ public:
 
 };
 
-}
