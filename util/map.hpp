@@ -1,5 +1,6 @@
 #pragma once
 #include <util/list.hpp>
+#include <core/q_object.hpp>
 
 template<typename K,typename V>
 struct entry
@@ -188,7 +189,7 @@ public:
     };
 
     template<class U>
-    uint32_t hashT(const Golden::g_ptr<U>& p)
+    uint32_t hashT(const g_ptr<U>& p)
     {
         return hashT(p.getPtr());
     }
