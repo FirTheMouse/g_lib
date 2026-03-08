@@ -1,3 +1,5 @@
+#pragma once
+
 #include<util/util.hpp>
 
 inline std::string add_commas(int num) {
@@ -73,14 +75,14 @@ namespace sgen {
         "Copper|Silver|Iron|Wood|High|Low|Swift|Old|New|Red|White|Black|Green|Blue|Yellow," 
         "paw|tail|fang|talon|wing|feather|river|hill|heart|claw|hall");
 
-    std::string randsgen(const namebase& g) {
+    inline std::string randsgen(const namebase& g) {
         std::string result;
         for(const auto& s : g.opts) 
             result.append(s.rand());
         return result;
     }
     
-    std::string randsgen(const std::string& line) {
+    inline std::string randsgen(const std::string& line) {
         list<std::string> lines = split_str(line,',');
         std::string result;
         for(const auto& l : lines) {

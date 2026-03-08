@@ -2,6 +2,7 @@
 
 #include <util/util.hpp>
 #include <core/object.hpp>
+#include <util/strings.hpp>
 #include <chrono>
 #include <iostream>
 
@@ -9,7 +10,7 @@
 namespace Log {
 
 // Provides the time it takes for a function to run, not avereged over iterations
-double time_function(int ITERATIONS,std::function<void(int)> process) {
+inline double time_function(int ITERATIONS,std::function<void(int)> process) {
     auto start = std::chrono::high_resolution_clock::now();
     for(int i=0;i<ITERATIONS;i++) {
         process(i);
@@ -27,7 +28,7 @@ struct Comparison_ {
 };
 
 
-void run_rig(list<list<std::function<void(int)>>> f_table,list<list<std::string>> s_table,list<Comparison_> comps,bool warm_up,int PROCESS_ITERATIONS,int C_ITS) {
+inline void run_rig(list<list<std::function<void(int)>>> f_table,list<list<std::string>> s_table,list<Comparison_> comps,bool warm_up,int PROCESS_ITERATIONS,int C_ITS) {
     list<list<double>> t_table;
 
     for(int c=0;c<f_table.length();c++) {
