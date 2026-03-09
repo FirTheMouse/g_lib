@@ -22,6 +22,39 @@ static inline std::string yellow(const std::string& text) {
 static inline std::string red(const std::string& text) {
   return "\x1b[31m"+text+"\x1b[0m";
 }
+static inline std::string blue(const std::string& text) {
+  return "\x1b[34m"+text+"\x1b[0m";
+}
+static inline std::string magenta(const std::string& text) {
+  return "\x1b[35m"+text+"\x1b[0m";
+}
+static inline std::string cyan(const std::string& text) {
+  return "\x1b[36m"+text+"\x1b[0m";
+}
+static inline std::string white(const std::string& text) {
+  return "\x1b[37m"+text+"\x1b[0m";
+}
+static inline std::string gray(const std::string& text) {
+  return "\x1b[90m"+text+"\x1b[0m";
+}
+
+static inline std::string bold_str(const std::string& text) {
+  return "\x1b[1m"+text+"\x1b[0m";
+}
+static inline std::string dim_str(const std::string& text) {
+  return "\x1b[2m"+text+"\x1b[0m";
+}
+static inline std::string underline_str(const std::string& text) {
+  return "\x1b[4m"+text+"\x1b[0m";
+}
+
+
+static inline std::string rgb(const std::string& text, int r, int g, int b) {
+  return "\x1b[38;2;"+std::to_string(r)+";"+std::to_string(g)+";"+std::to_string(b)+"m"+text+"\x1b[0m";
+}
+static inline std::string bg(const std::string& text, int r, int g, int b) {
+  return "\x1b[48;2;"+std::to_string(r)+";"+std::to_string(g)+";"+std::to_string(b)+"m"+text+"\x1b[0m";
+}
 
 static std::string ftime(double t) 
 {
