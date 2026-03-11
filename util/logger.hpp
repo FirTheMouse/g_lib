@@ -277,6 +277,9 @@ public:
         parent->children << make<SeqLine>(label,false);
         parent->children.last()->parent = parent.getPtr();
         on_line = parent->children.last();
+
+        if(log_everything)
+            print(label);
     }
 
     double end_line() 
