@@ -820,6 +820,11 @@ public:
         return get_from_note(notes.getOrDefault(name,note_fallback));
     }
 
+    void* data_get_at(const std::string& name, int sub_index) {
+        _note& note = notes.getOrDefault(name,note_fallback);
+        return get(note.index,sub_index,note.size);
+    }
+
     void* array_get(int index) {
         return get_from_note(array[index]);
     }
