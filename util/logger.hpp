@@ -193,7 +193,7 @@ public:
 
     map<std::string, Log::Line> timers;
     map<std::string, int> counters;
-    bool print_on_line_end = true;
+    bool print_on_line_end = false;
     bool log_everything = false;
 
     void start_timer(const std::string &label)
