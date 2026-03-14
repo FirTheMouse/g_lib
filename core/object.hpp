@@ -2,8 +2,8 @@
 
 #include <iostream>
 #include <atomic>
-#include <util/util.hpp>
-#include<core/q_object.hpp>
+#include "../util/util.hpp"
+#include "../core/q_object.hpp"
 
 class Type;
 

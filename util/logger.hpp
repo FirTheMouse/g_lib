@@ -1,8 +1,8 @@
 #pragma once
 
-#include <util/util.hpp>
-#include <core/object.hpp>
-#include <util/strings.hpp>
+#include "../util/util.hpp"
+#include "../core/object.hpp"
+#include "../util/strings.hpp"
 #include <chrono>
 #include <iostream>
 

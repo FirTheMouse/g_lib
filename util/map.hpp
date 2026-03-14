@@ -1,6 +1,6 @@
 #pragma once
-#include <util/list.hpp>
-#include <core/q_object.hpp>
+#include "../util/list.hpp"
+#include "../core/q_object.hpp"
 
 template<typename K,typename V>
 struct entry

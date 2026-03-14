@@ -1,8 +1,8 @@
 #pragma once
 
-#include <core/object.hpp>
-#include <util/util.hpp>
-#include <util/logger.hpp>
+#include "../core/object.hpp"
+#include "../util/util.hpp"
+#include "../util/logger.hpp"
 
 struct value_ {
     value_(size_t _size, std::string _name) 

@@ -8,9 +8,9 @@
 #include <sstream>
 #include <string>
 
-#include <util/list.hpp>
-#include <util/map.hpp>
-#include<util/basic.hpp>
+#include "../util/list.hpp"
+#include "../util/map.hpp"
+#include "../util/basic.hpp"
 
 inline list<std::string> split_str(const std::string& s,char delimiter)
 {
